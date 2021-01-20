@@ -11,17 +11,18 @@ public class TestBoard {
 
 	Board board = new Board();
 
-//	@Test
-//	public void test() {
-//		fail("Not yet implemented");
-//	}
-
 	@Test
 	public void testSetMark() {
 		try {
 			board.setMark(Board.SYMBOL_X, 0, 0);
 
 			assertEquals("X", board.getField()[0][0].toString());
+			
+			board.setMark(Board.SYMBOL_O, 1, 1);
+
+			assertEquals("O", board.getField()[1][1].toString());
+			
+			assertNull(board.getField()[2][2]);
 			
 		} catch (InvalidPositionException e) {
 			// TODO Auto-generated catch block
