@@ -9,14 +9,8 @@ public class Board {
 
 	private String[][] field;
 
-	@SuppressWarnings("unused")
 	public Board() {
 		field = new String[3][3];
-		for (String[] strings : field) {
-			for (String string : strings) {
-				string = SYMBOL_NOT_SET;
-			}
-		}
 	}
 	
 	public String[][] getField() {
